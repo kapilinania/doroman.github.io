@@ -1,0 +1,373 @@
+*{
+	padding: 0px;
+	margin: 0px;
+}
+body{
+	background-color: rgb(0,0,0);
+}
+:root{
+	--bg-blue:blue;
+	--bg-white:white;
+	--bg-black:black;
+	--bg-red:red;
+	--bg-orange:orange;
+	--font-size:14px;
+}
+.clear{
+	clear: both;
+}
+.main{
+	width: 1000px;
+	height: 700px;
+	border: 5px solid red;
+	margin: auto;
+	position: relative;
+}
+
+.doroman{
+	width: 250px;
+	height: 250px;
+	background-color: var(--bg-blue);
+	position: absolute;
+	top: 10%;
+	left: 40%;
+	border-radius: 50% 50% 50% 50%;
+}
+
+/*eye part is started*/
+.eye{
+	width: 150px;
+	height:70px;
+	margin-top: 60px;
+	margin-left:50px;
+	border: 0px solid red;
+}
+.left_eye{
+	width: 45px;
+	height: 70px;
+	float: right;
+	background-color: var(--bg-white);
+	border-radius: 50%;
+}
+.left_eye:hover{
+	background-color: var(--bg-red);
+}
+  
+.left_eyein{
+	width: 20px;
+	height: 30px;
+	background-color: var(--bg-black);
+	border-radius: 100%;
+	margin-left: 18px;
+	margin-top: 10px;
+	position: relative;
+	top: 10px;
+	left: -10px;	
+}
+
+ @-webkit-keyframes eye{
+   	0%{
+   		transform: translate(0px,0px);
+   	}
+   	25%{
+   		transform: translate(0px,10px);
+   	}
+   	50%{
+   		transform: translate(10px,10px);
+   	}
+   	75%{
+   		transform: translate(10px,0px);
+   	}
+   	100%{
+   		transform: translate(0px,0px);
+   	}
+   }
+.left_eyeinin{
+	width:8px;
+	height: 13px;
+	background-color: var(--bg-white);
+	border-radius: 100%;
+	margin-bottom: 10px;
+	border: 0px solid red;
+	margin-left: 5px;
+	position: absolute;
+	top: 8px;
+	right: 9px;
+	-webkit-animation:eye 5s 0s infinite linear;
+}
+.right_eye{
+	width: 45px;
+	height: 70px;
+	background-color: var(--bg-white);
+	border-radius: 50%;
+}
+.right_eye:hover{
+	background-color: var(--bg-red);
+}
+.right_eyein{
+	width: 20px;
+	height: 30px;
+	background-color: var(--bg-black);
+	border-radius: 100%;
+	margin-left: 10px;
+	margin-top: 10px;
+	position: relative;
+	top: 20px;
+}
+.right_eyeinin{
+	width: 8px;
+	height: 13px;
+	background-color: var(--bg-white);
+	border-radius: 100%;
+	margin-bottom: 10px;
+	border: 0px solid red;
+	margin-left: 2px;
+	position: absolute;
+	top: 8px;
+	-webkit-animation:eye 5s 0s infinite linear;
+}
+/* eye part is closed*/
+.noise{
+	width: 30px;
+	height: 20px;
+	background-color:var(--bg-red);
+	border-radius: 70px 70px 70px 70px;
+	margin-left: 105px;
+	margin-top: 10px;
+	border:5px solid green;
+}
+.noise:hover{
+	background-color: orange;
+}
+/*leaf part is started*/
+.leaf{
+	width: 65px;
+	height: 45px;
+	background-color: var(--bg-white);
+	border-radius: 0px 0px 70px 70px;
+	margin-left: 93px;
+	margin-top: 10px;
+	position: relative;
+	left: 0px;
+	right: 0px;
+	overflow: hidden;
+}
+.leaf_leaf{
+	width: 20px;
+	height: 20px;
+	background-color: var(--bg-red);
+	border-radius: 0px 0px 70px 70px;
+	margin-left: 20px;
+	-webkit-animation:leaf 5s 0s infinite linear;
+}
+@-webkit-keyframes leaf{
+   	from{
+   		height: 10px;
+   		transform: translate(-25px,0px);
+   		background-color: rgba(33,10,0,1);
+
+   	}
+   	to{
+   		height: 20px;
+   		transform: translate(18px,0px);
+   		background-color: rgba(255,0,0,1);
+   	}
+}
+.leaf_leaf:hover{
+	background-color: var(--bg-red);
+}
+.hidden{
+	width: 65px;
+	height: 45px;
+	background-color: var(--bg-white);
+	border-radius: 0px 0px 70px 70px;
+	margin-left: 0px;
+	margin-top: 10px;
+	position: absolute;
+	top: -100%;
+	transition: 3s;
+}
+.leaf:hover .hidden{
+	top: -20%;
+	background-color: var(--bg-red);
+	color: var(--bg-white);
+	font-size:var(--font-size);
+	text-align: center;
+}
+/*leaf part is closed*/
+/*middle part is started*/
+.middle{
+	width: 250px;
+	height: 250px;
+	background-color:var(--bg-blue);
+	border-radius:30px ;
+	margin-top: 0px;
+	position: relative;
+	top: 20px; 
+}
+.head{
+	width: 100px;
+	height: 100px;
+	border: 0px solid black;
+	position: absolute;
+	overflow: hidden;
+	top: 40px;
+	left: 78px;
+	border-radius: 10px;
+}
+.img1{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	transform: scale(1,1);
+}
+.head:hover .img1{
+	transform: scale(0,0);
+	transition: 5s;
+}
+.img2{
+	transform: scale(0,0);
+}
+.head:hover .img2{
+	transform: scale(1,1);
+	transition: 5s;
+	border-radius: 10px;
+}
+
+
+/*middle part is closed*/
+
+/*tai part is started*/
+.main_tai{
+	position: relative;
+}
+.tai{
+	width: 80px;
+	height: 20px;
+	border-radius: 50px;
+	background-color: var(--bg-red);
+	margin-top: 0px;
+	margin-left: 85px;
+	border:1px solid green;
+	position: absolute;
+	top: 15px;
+	z-index: 1;
+}
+.tai_middle{
+	width: 20px;
+	height: 18px;
+	background-color: var(--bg-orange);
+	border-radius: 50px;
+	border:2px solid black;
+	margin-left: 30px;
+	transition: 3s;
+}
+.tai_middle:hover{
+	transform: rotate(-120deg);
+	background-color: white;
+	height: 20px;
+}
+/*tai part is closed*/
+/*hend part is started */
+.hend_part{
+	position: relative;
+
+}
+.lefthend_part{
+	width:50px;
+	height:150px;
+	border-radius: 10px;
+	position: absolute;
+	top: -230px;
+	left: -29px;
+}
+.css1{
+    height: 100px;
+    background-color: var(--bg-white);
+    border-radius: 10px 10px 0px 0px;
+}
+
+.css2{
+	height: 50px;
+	background-color: var(--bg-orange); 
+	border-radius: 0px 0px 10px 10px;
+
+}
+.righthend_part{
+	width: 50px;
+	height:150px;
+	background-color: var(--bg-white);
+	border-radius: 10px;
+	position: absolute;
+	left:240px;
+	top: -230px;
+	transform: skew(20deg);
+	-webkit-animation:hend 2s 0s infinite linear;
+}
+.css3{
+    height: 100px;
+    background-color: var(--bg-white);
+    border-radius: 10px 10px 0px 0px;
+}
+
+.css4{
+	height: 50px;
+	background-color: var(--bg-red); 
+	border-radius: 0px 0px 10px 10px;
+}
+
+@-webkit-keyframes hend{
+   	0%{
+   		transform: rotate(0deg);
+   	}
+   
+   	100%{
+   		transform: rotate(-10deg);
+   	}
+   }
+  
+/*hend part is closed*/
+/*foot part is started*/
+.foot{
+   position: relative;
+   z-index: 1;
+}
+.left_foot{
+	width: 125px;
+    height: 50px;
+	background-color: var(--bg-white);
+	border-radius: 20px;
+	position: absolute;
+	left: -5px;
+}
+.left_foot:hover{
+	background-color: red;
+	width: 100px;
+	height: 150px;
+}
+.right_foot{
+	width: 128px;
+	height: 50px;
+	background-color:var(--bg-white);
+	border-radius: 20px;
+	position: absolute;
+	left:120px;
+	top: 0px;
+}
+.right_foot:hover{
+	background-color: orange;
+	width: 100px;
+	height: 150px;
+}
+.foot-border{
+	width: 3px;
+	height: 100px;
+	background-color: var(--bg-white);
+	position: absolute;
+	left: 120px;
+	top: -70px;
+
+}
+
+
+/*foot part is closed*/
